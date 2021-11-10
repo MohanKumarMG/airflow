@@ -44,7 +44,7 @@ jobs:
           --build-arg PYTHON_BASE_IMAGE="python:3.6-slim-buster" \
           --build-arg AIRFLOW_VERSION="2.2.1" \
           --build-arg AIRFLOW_EXTRAS="async,celery,ftp,mysql,pandas,postgres,sftp,ssh" \
-          --build-arg ADDITIONAL_PYTHON_DEPS="phpserialize" \
+          --build-arg ADDITIONAL_PYTHON_DEPS="phpserialize redis" \
           --build-arg INSTALL_MSSQL_CLIENT="false" \
           --build-arg AIRFLOW_IMAGE_REPOSITORY=${{ github.repository }} \
           --build-arg RUNTIME_APT_DEPS="apt-transport-https apt-utils ca-certificates curl dumb-init gnupg gosu krb5-user libffi6 libsasl2-2 libsasl2-modules libssl1.1 locales lsb-release netcat openssh-client postgresql-client python2 rsync sasl2-bin" \
